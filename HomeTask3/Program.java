@@ -47,7 +47,9 @@ public class Program {
                 writer.write(String.format("%s %s %s %s %s %s", lastame, firstname, surname, format.format(birthday), number, gender));
                 writer.close();
             } catch (IOException e) {
+                e.getStackTrace();
                 throw new IOException("Ошибка при работе с файлом!");
+                
             }
 
         } catch (ParseException e) {
